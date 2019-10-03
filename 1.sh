@@ -1,1 +1,1 @@
-echo "Hello world!"
+echo "Let's start from basic"

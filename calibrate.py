@@ -80,13 +80,13 @@ ap.add_argument("-a", "--min-area", type=int, default=500, help="minimum area si
 args = vars(ap.parse_args())
  
 # if the video argument is None, then we are reading from webcam
-if args.get("video", None) is None:
-    cap = VideoStream(src=0).start()
-    time.sleep(2.0)
+#if args.get("video", None) is None:
+#    cap = VideoStream(src=0).start()
+#    time.sleep(2.0)
  
 # otherwise, we are reading from a video file
-else:
-    cap = cv2.VideoCapture(args["video"])
+#else:
+#    cap = cv2.VideoCapture(args["video"])
 #NEED TO ANALYZE GREATEST NUMBER IN THE FOLDER
 a = 0
 mass = []
@@ -99,7 +99,7 @@ if mass:
 text = "ROI is not setted"
 while(True):
     # Capture frame-by-frame
-    frame = cap.read()
+#    frame = cap.read()
     frame = cv2.imread("images\ROI_6.jpg")
     clone = frame.copy()
     printtext(frame, text)

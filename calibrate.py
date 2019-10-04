@@ -97,14 +97,14 @@ for filename in os.listdir("images"):
 if mass:
     a = max(mass) + 1
 text = "ROI is not setted"
+frame = cv2.imread("images/ROI_6.jpg")
+clone = frame.copy()
+printtext(frame, text)
+cv2.namedWindow("frame")
+cv2.setMouseCallback("frame", click_and_crop)
 while(True):
     # Capture frame-by-frame
 #    frame = cap.read()
-    frame = cv2.imread("images/ROI_6.jpg")
-    clone = frame.copy()
-    printtext(frame, text)
-    cv2.namedWindow("frame")
-    cv2.setMouseCallback("frame", click_and_crop)
     key = cv2.waitKey(1) & 0xFF
     # if the 'r' key is pressed, reset the cropping region
     if key == ord("r"):

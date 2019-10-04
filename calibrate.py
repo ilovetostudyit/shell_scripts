@@ -90,7 +90,7 @@ args = vars(ap.parse_args())
 #NEED TO ANALYZE GREATEST NUMBER IN THE FOLDER
 a = 0
 mass = []
-for filename in os.listdir("images"):
+for filename in os.listdir("shell_scripts/images"):
     basename, extension = os.path.splitext(filename)
     project, number = basename.split('_')
     mass.append(int(number))

@@ -90,7 +90,7 @@ args = vars(ap.parse_args())
 #NEED TO ANALYZE GREATEST NUMBER IN THE FOLDER
 a = 0
 mass = []
-for filename in os.listdir("shell_scripts/images"):
+for filename in os.listdir("images"):
     basename, extension = os.path.splitext(filename)
     project, number = basename.split('_')
     mass.append(int(number))
@@ -100,7 +100,7 @@ text = "ROI is not setted"
 while(True):
     # Capture frame-by-frame
 #    frame = cap.read()
-    frame = cv2.imread("shell_scripts/images/ROI_6.jpg")
+    frame = cv2.imread("images/ROI_6.jpg")
     clone = frame.copy()
     printtext(frame, text)
     cv2.namedWindow("frame")
@@ -125,7 +125,7 @@ while(True):
         break
     elif key == ord("s") and calibrate == False:
         try:
-            cv2.imwrite( "shell_scripts/images/ROI_" + str(a) +".jpg", roi)
+            cv2.imwrite( "images/ROI_" + str(a) +".jpg", roi)
             a = a + 1
             text = "ROI SAVED"
             saved = True
